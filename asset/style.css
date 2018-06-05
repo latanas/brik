@@ -1,0 +1,54 @@
+/*
+  Project: Brik
+  Author:  Copyright (C) 2018, Atanas Laskov
+
+  License: BSD license, see LICENSE.md for more details.
+
+  http://www.atanaslaskov.com/brik/
+*/
+html, body {
+  margin:  0px;
+  padding: 0px;
+
+  color: white;
+  background-color: black;
+
+  font-family:  Helvetica, sans-serif;
+  font-size:    12px;
+  line-height:  24px;
+
+  overflow: hidden;
+}
+
+.help {
+  z-index:  999;
+  position: fixed;
+
+  left: 50px;
+  top:  50px;
+}
+
+.key {
+  margin:  3px;
+  padding: 3px;
+
+  border-radius: 3px;
+
+  font-weight: 700;
+  font-size:   14px;
+
+  background-color: white;
+  color: black;
+}
+
+.copy {
+  z-index:  999;
+  position: fixed;
+
+  bottom: 5px;
+  left:   20px;
+}
+
+.game_over {
+  display: none;
+}
