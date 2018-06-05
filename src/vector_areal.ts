@@ -1,0 +1,33 @@
+/*
+  Project: Brik
+  Author:  Copyright (C) 2015, Atanas Laskov
+
+  License: BSD license, see LICENSE for more details.
+
+  http://www.atanaslaskov.com/brik/
+*/
+
+/// <reference path="vector.ts" />
+
+// Vector with area of effect
+//
+class VectorAreal extends Vector {
+    public areal;
+
+    constructor(x:number =0.0, y:number =0.0, areal:number =1.0) {
+        super(x,y);
+        this.areal = areal;
+    }
+
+    public copy(): VectorAreal {
+        return new VectorAreal(this.x, this.y, this.areal);
+    }
+
+    public copyAreal(): VectorAreal {
+        return new VectorAreal(this.x, this.y, this.areal);
+    }
+
+    isIntersected(v: VectorAreal): boolean {
+        return Vector.minus(this, v).distance() < (this.areal + v.areal)/2.0;
+    }
+}
