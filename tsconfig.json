@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "outDir": "./build/",
-    "noImplicitAny": false,
     "module": "es6",
-    "target": "es5",
-    "allowJs": true
+    "target": "es3",
+    "allowJs": true,
+    "noImplicitAny": false,
   }
 }

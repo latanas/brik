@@ -1,11 +1,11 @@
 
 #### Install dependencies:
 
-Remove any old versions on nodejs and npm.
-Update to the latest node and npm:
+Remove any old versions of nodejs and npm.
+Update to the latest version of node and npm:
 
 ```
-curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+sudo apt-get-install nodejs
 npm install
 ```
 
@@ -16,14 +16,9 @@ because there appears to be Debian/Ubuntu difference in the simlink name.
 
 ```
 source ./brik.sh
-gulp
+webpack
 ```
 
-#### Unit test:
-
-```
-gulp test
-```
 
 #### Run:
 http://www.atanaslaskov.com/brik/
