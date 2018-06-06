@@ -6,11 +6,11 @@
 
   http://www.atanaslaskov.com/brik/
 */
-'use strict'
+"use strict"
 
 // The renderer draws pictures on the canvas.
 //
-interface Renderer {
+export default interface Renderer {
   render(): void;
   animate( dt: number ): void;
 }

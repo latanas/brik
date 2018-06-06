@@ -6,10 +6,11 @@
 
   http://www.atanaslaskov.com/brick/
 */
+"use strict"
 
 // Animation clock
 //
-class Clock{
+export default class Clock {
   public clock: number; // Absolute time
   public dt:    number; // Time delta
   public fps:   number; // Frames per second

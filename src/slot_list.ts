@@ -6,6 +6,7 @@
 
   http://www.atanaslaskov.com/brik/
 */
+"use strict"
 
 // Slot list provides object lookup by ID;
 // Empty slots are set to null and recycled.
@@ -14,7 +15,7 @@
 // - Constant time delete by ID
 // - Linear time insert
 //
-class SlotList {
+export default class SlotList {
   private items: any[];
 
   // Copy initial list

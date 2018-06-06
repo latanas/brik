@@ -1,16 +1,17 @@
 /*
   Project: Brik
-  Author:  Copyright (C) 2015, Atanas Laskov
+  Author:  Copyright (C) 2018, Atanas Laskov
 
   License: BSD license, see LICENSE.md for more details.
 
   http://www.atanaslaskov.com/brick/
 */
+"use strict"
 
-/// <reference path="game.ts" />
-/// <reference path="renderer_wgl2.ts" />
+import Game from "./game"
+import RendererWgl from "./renderer_wgl"
 
 window.addEventListener("load", () => {
-  var g = new Game( new RendererWGL2() );
+  var g = new Game( new RendererWgl() );
   g.actionFrame();
 });

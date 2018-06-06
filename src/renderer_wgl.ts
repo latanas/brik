@@ -6,17 +6,17 @@
 
   http://www.atanaslaskov.com/brik/
 */
-'use strict'
+"use strict"
 
-/// <reference path="renderer.ts" />
-/// <reference path="renderer_wgl2_shader_program.ts" />
+import Renderer from "./renderer"
+import RendererWglShaderProgram from "./renderer_wgl_shader_program"
 
 // The renderer draws pictures on the canvas using WebGL 2.
 //
-class RendererWGL2 implements Renderer {
+export default class RendererWgl implements Renderer {
   private width: number;
   private height: number;
-  private shader: ShaderProgramWGL2;
+  private shader: RendererWglShaderProgram;
   private gl: any;
 
   constructor() {
@@ -52,7 +52,7 @@ class RendererWGL2 implements Renderer {
     let vertexArray = this.gl.createVertexArray();
     this.gl.bindVertexArray( vertexArray );
 
-    this.shader = new ShaderProgramWGL2( this.gl, "shader/vertex.glsl", "shader/fragment.glsl" );
+    this.shader = new RendererWglShaderProgram( this.gl, "shader/vertex.glsl", "shader/fragment.glsl" );
   }
 
   render(): void {

@@ -6,14 +6,15 @@
 
   http://www.atanaslaskov.com/brick/
 */
+"use strict"
 
-/// <reference path="vector.ts" />
+import Vector from "./vector"
 
-enum GridSnapType {
+export enum GridSnapType {
   TOP_LEFT, CENTER
 }
 
-class Grid {
+export default class Grid {
   private dimension: Vector;
 
   constructor(dimension: Vector) {

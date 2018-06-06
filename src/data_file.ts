@@ -6,10 +6,11 @@
 
   http://www.atanaslaskov.com/brik/
 */
+"use strict"
 
 // Load a data file from the specified server location.
 //
-class DataFile {
+export default class DataFile {
   constructor( location, onLoaded ) {
     let xhr = new XMLHttpRequest();
 

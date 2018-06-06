@@ -6,18 +6,19 @@
 
   http://www.atanaslaskov.com/brik/
 */
+"use strict"
 
-/// <reference path="clock.ts" />
-/// <reference path="renderer.ts" />
-/// <reference path="vector_areal.ts" />
-
-/// <reference path="game_object_player.ts" />
-
-/// <reference path="slot_list.ts" />
+import Clock from "./clock"
+import Vector from "./vector"
+import Renderer from "./renderer"
+import VectorAreal from "./vector_areal"
+import GameObject from "./game_object"
+import GameObjectPlayer from "./game_object_player"
+import SlotList from "./slot_list"
 
 // Game manages the dynamic objects
 //
-class Game {
+export default class Game {
   private renderer: Renderer;
   private clock: Clock;
   private isPaused: boolean;

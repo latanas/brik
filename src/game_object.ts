@@ -6,13 +6,15 @@
 
   http://www.atanaslaskov.com/golden/
 */
+"use strict"
 
-/// <reference path="vector_areal.ts" />
-/// <reference path="renderer.ts" />
+import Vector from "./vector"
+import VectorAreal from "./vector_areal"
+import Renderer from "./renderer"
 
 // Abstract game object
 //
-interface GameObject {
+export default interface GameObject {
   animate( dt: number ): void;
   perceive( another: any ): void;
   spawn(): GameObject[];

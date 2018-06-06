@@ -6,10 +6,11 @@
 
   http://www.atanaslaskov.com/brick/
 */
+"use strict"
 
 // Cartesian 2d coordinate (x;y)
 //
-class Vector{
+export default class Vector {
   public x: number;
   public y: number;
 

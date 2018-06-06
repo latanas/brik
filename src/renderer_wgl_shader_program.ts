@@ -6,13 +6,13 @@
 
   http://www.atanaslaskov.com/brik/
 */
-'use strict'
+"use strict"
 
-/// <reference path="data_file.ts" />
+import DataFile from "./data_file"
 
 // The shader program class loads and compiles shaders.
 //
-class ShaderProgramWGL2 {
+export default class ShaderProgramWgl {
   private gl: any;
   private program: any;
 

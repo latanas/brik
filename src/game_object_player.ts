@@ -6,14 +6,17 @@
 
   http://www.atanaslaskov.com/golden/
 */
+"use strict"
 
-/// <reference path="game_object.ts" />
-/// <reference path="renderer.ts" />
+import Vector from "./vector"
+import VectorAreal from "./vector_areal"
+import GameObject from "./game_object"
+import Renderer from "./renderer"
 
 // Creature controlled by the player
 //
-class GameObjectPlayer implements GameObject {
-  constructor( renderer: Renderer) {}
+export default class GameObjectPlayer implements GameObject {
+  constructor( renderer: Renderer ) {}
 
   animate( dt: number ): void {}
   perceive( another: any ): void {};

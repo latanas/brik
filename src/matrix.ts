@@ -6,11 +6,13 @@
 
   http://www.atanaslaskov.com/brick/
 */
-/// <reference path="vector.ts" />
+"use strict"
+
+import Vector from "./vector"
 
 // Transformation matrix for Vector
 //
-class Matrix {
+export default class Matrix {
   private m: number[];
 
   constructor() {

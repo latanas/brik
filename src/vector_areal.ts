@@ -6,12 +6,13 @@
 
   http://www.atanaslaskov.com/brik/
 */
+"use strict"
 
-/// <reference path="vector.ts" />
+import Vector from "./vector"
 
 // Vector with area of effect
 //
-class VectorAreal extends Vector {
+export default class VectorAreal extends Vector {
     public areal;
 
     constructor(x:number =0.0, y:number =0.0, areal:number =1.0) {
