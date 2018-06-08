@@ -8,6 +8,9 @@
 */
 "use strict"
 
+import Vector from "./vector"
+import Color from "./color"
+import Gradient from "./gradient"
 import Renderer from "./renderer"
 import RendererWglShaderProgram from "./renderer_wgl_shader_program"
 
@@ -25,8 +28,7 @@ export default class RendererWgl implements Renderer {
 
     this.gl = c.getContext( "webgl2" );
     if( !this.gl ) {
-      console.log( "RendererWGL2: WebGL 2 context is not available." );
-      return;
+      throw new Error("WebGL 2 rendering is not supported.");
     }
     this.gl.clearColor( 0.5, 0.5, 0.5, 1.0 );
     this.gl.disable( this.gl.DEPTH_TEST );
@@ -64,6 +66,21 @@ export default class RendererWgl implements Renderer {
   }
 
   animate( dt: number ): void {
+  }
 
+  style( color: Color | Gradient, thickness: number ): void {
+  }
+
+  rotation( angle: number ): void {
+  }
+
+  background( position: Vector, scale: number ): void {
+  }
+
+  polyline( points: Vector[] ): void {
+
+  }
+
+  marker( position: Vector, size: number, turn: number ): void {
   }
 }

@@ -10,8 +10,20 @@
 
 import Game from "./game"
 import RendererWgl from "./renderer_wgl"
+import RendererCanvas from "./renderer_canvas"
 
 window.addEventListener("load", () => {
-  var g = new Game( new RendererWgl() );
-  g.actionFrame();
+  let renderer = null;
+
+  try {
+    renderer = new RendererWgl();
+  }
+  catch( error ) {
+    console.log(error);
+    renderer = new RendererCanvas();
+  }
+
+  let game = new Game( renderer );
+  game.actionFrame();
 });
+
