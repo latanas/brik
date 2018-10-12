@@ -8,9 +8,9 @@
 */
 "use strict"
 
-// Load a data file from the specified server location.
+// Get a file from the specified server location.
 //
-export default class DataFile {
+export default class FileRequest {
   constructor( location, onLoaded ) {
     let xhr = new XMLHttpRequest();
 
