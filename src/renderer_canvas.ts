@@ -6,6 +6,7 @@
 
   http://www.atanaslaskov.com/brik/
 */
+"use strict"
 
 import Vector from "./vector"
 import Color from "./color"
@@ -14,7 +15,7 @@ import Renderer from "./renderer"
 
 // Render using HMTL5 canvas
 //
-export default class RendererCanvas implements Renderer{
+export default class RendererCanvas implements Renderer {
   private context: CanvasRenderingContext2D;
   private width:   number;
   private height:  number;
@@ -108,7 +109,7 @@ export default class RendererCanvas implements Renderer{
     var yStart = position.y % ny;
 
     if( xStart>0 ) xStart = xStart-nx;
-    if( yStart>0 ) yStart = yStart-ny;;
+    if( yStart>0 ) yStart = yStart-ny;
 
     for(var x=xStart; x<this.width; x+=nx) {
       for(var y=yStart; y<this.height; y+=ny) {

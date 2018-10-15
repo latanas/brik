@@ -6,6 +6,7 @@
 
   http://www.atanaslaskov.com/brik/
 */
+"use strict"
 
 // Colour in RGBA fromat
 //
@@ -29,7 +30,7 @@ export default class Color{
     var b = this.componentRGB(this.b);
     var a = this.componentAlpha(this.a);
 
-    return "rgba(${r},${g},${b},${a})";
+    return `rgba(${r},${g},${b},${a})`;
   }
 
   // RGB components are integers mapped to the range [0, 255]

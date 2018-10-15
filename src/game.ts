@@ -12,9 +12,11 @@ import Clock from "./clock"
 import Vector from "./vector"
 import Renderer from "./renderer"
 import VectorAreal from "./vector_areal"
+import SlotList from "./slot_list"
 import GameObject from "./game_object"
 import GameObjectPlayer from "./game_object_player"
-import SlotList from "./slot_list"
+import GameObjectBall from "./game_object_ball";
+import GameObjectBrick from "./game_object_brick";
 
 // Game manages the dynamic objects
 //
@@ -31,7 +33,9 @@ export default class Game {
     this.isPaused = false;
 
     this.objects = new SlotList([
-      new GameObjectPlayer( renderer ),
+      new GameObjectPlayer(renderer),
+      new GameObjectBall(renderer),
+      new GameObjectBrick(renderer)
     ]);
   }
 
@@ -51,6 +55,10 @@ export default class Game {
   //
   private render() {
     this.renderer.render();
+
+    this.objects.each( (obj: GameObject, id:number) => {
+      obj.render();
+    });
   }
 
   // Make things move

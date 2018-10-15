@@ -15,6 +15,7 @@ import Renderer from "./renderer"
 // Abstract game object
 //
 export default interface GameObject {
+  render(): void;
   animate( dt: number ): void;
   perceive( another: any ): void;
   spawn(): GameObject[];
